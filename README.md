@@ -1,127 +1,68 @@
-# Aplikasi Biodata Siswa
+# 🏆 Pendaftaran Elite Pro Academy (EPA)
 
-Aplikasi Biodata Siswa merupakan aplikasi berbasis web sederhana yang dibuat menggunakan **Framework Laravel** dan **PHP**. Aplikasi ini bertujuan untuk mempermudah proses pengelolaan dan pendataan informasi siswa secara digital.
+Aplikasi **Pendaftaran Elite Pro Academy (EPA)** merupakan aplikasi berbasis web yang dibuat menggunakan framework Laravel dan database MySQL. Aplikasi ini digunakan untuk mengelola data pendaftaran calon peserta Elite Pro Academy.
+
+## 📌 Fitur Aplikasi
+
+- Halaman beranda EPA.
+- Formulir pendaftaran peserta.
+- Menyimpan data pendaftar ke database.
+- Menampilkan daftar peserta yang sudah mendaftar.
+- Mengedit data peserta.
+- Menghapus data peserta.
 
 ## 🛠️ Teknologi yang Digunakan
 
-- PHP
-- Laravel
-- MySQL
-- HTML
-- Blade Template
-- Visual Studio Code
-- phpMyAdmin
+- **PHP** – Bahasa pemrograman.
+- **Laravel** – Framework pengembangan aplikasi.
+- **MySQL** – Database.
+- **HTML** – Membuat struktur halaman.
+- **CSS** – Mengatur tampilan aplikasi.
+- **Visual Studio Code** – Code editor.
+- **Laragon** – Local development environment.
 
-## ✨ Fitur Aplikasi
-
-- Menampilkan data biodata siswa.
-- Menyimpan data siswa ke database.
-- Menampilkan informasi siswa berdasarkan tabel.
-
-## 📋 Informasi Data Siswa
-
-Data yang dikelola dalam aplikasi ini meliputi:
-
-- Nama
-- NIS
-- Jurusan
-- Kelas
-
-## 📁 Struktur Project
+## 📂 Struktur Aplikasi
 
 ```text
-aplikasi-siswa/
+elite_pro_academy/
 ├── app/
-│   ├── Http/
-│   │   └── Controllers/
-│   │       └── SiswaController.php
+│   ├── Http/Controllers/
+│   │   └── PendaftarController.php
 │   └── Models/
-│       └── Siswa.php
+│       └── Pendaftar.php
 ├── database/
 │   └── migrations/
+├── public/
+│   └── css/
+│       └── style.css
 ├── resources/
 │   └── views/
-│       └── siswa/
-│           └── index.blade.php
+│       ├── datang.blade.php
+│       ├── form.blade.php
+│       └── data.blade.php
 ├── routes/
 │   └── web.php
-└── .env
+└── README.md
 ```
 
-## ⚙️ Cara Instalasi
+## 🗄️ Database
 
-1. Clone repository:
+Nama database: `db_epa`
 
-```bash
-git clone URL_REPOSITORY
-```
+Tabel utama: `pendaftars`
 
-2. Masuk ke folder project:
+Data yang disimpan meliputi:
+- Nama
+- Tempat lahir
+- Tanggal lahir
+- Jenis kelamin
+- Nomor HP
+- Posisi
+- Alamat
 
-```bash
-cd aplikasi-siswa
-```
+## 🎯 Tujuan Pembuatan
 
-3. Install dependency:
-
-```bash
-composer install
-```
-
-4. Salin file environment:
-
-```bash
-cp .env.example .env
-```
-
-5. Generate application key:
-
-```bash
-php artisan key:generate
-```
-
-6. Buat database dengan nama `aplikasi_siswa` melalui phpMyAdmin.
-
-7. Atur konfigurasi database pada file `.env`:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=aplikasi_siswa
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-8. Jalankan migration:
-
-```bash
-php artisan migrate
-```
-
-9. Jalankan aplikasi:
-
-```bash
-php artisan serve
-```
-
-10. Buka browser:
-
-```text
-http://127.0.0.1:8000/siswa
-```
-
-## 🎯 Tujuan Project
-
-Project ini dibuat sebagai latihan pembelajaran Rekayasa Perangkat Lunak (RPL), khususnya dalam memahami penggunaan framework Laravel, konsep MVC (Model, View, Controller), routing, dan koneksi database MySQL.
+Project ini dibuat sebagai latihan pengembangan aplikasi web menggunakan framework Laravel, khususnya dalam penerapan konsep CRUD (Create, Read, Update, Delete), pengelolaan database MySQL, serta pembuatan halaman web menggunakan Blade.
 
 ## 👨‍💻 Developer
-
-**Muhammad Satria Firmansyah**
-
-Project Pembelajaran RPL  
-Framework Laravel
-
----
-
-⭐ Terima kasih telah mengunjungi repository ini!
+**Adiastama D**
